@@ -1,0 +1,106 @@
+body {
+    background-color: white;
+}
+
+.body1 {
+    background-image: url("./Carrotman_files/background.png");
+}
+
+.body2 {
+    background-image: url("./Carrotman_files/background.png");
+    height: 100%;
+    width: 100%;
+}
+
+.body3 {
+    background-image: url("./Carrotman_files/background.png");
+    height: 100%;
+    width: 100%;
+}
+
+#video {
+    display: block;
+    margin: auto;
+    margin-top: 1.5em;
+    animation: video-animatie 1.2s 1;
+}
+
+#transistion {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    pointer-events: none;
+    background-color: white;
+    opacity: 0%;
+}
+
+#transistion.animated {
+    animation: video-animatie 1.5s ease;
+  }
+
+@keyframes video-animatie {
+  0%   { opacity: 0%; }
+  50%  { opacity: 100%; }
+  100% { opacity: 0%; }
+}
+
+
+div {
+    position: fixed;
+    bottom: 22.5em;
+    left: 15em;
+    width: 300px;
+}
+
+div img {
+    width: 90px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    margin: 0 50px;
+    animation: knopfuncties 1.2s 1;
+}
+
+@keyframes knopfuncties {
+  0%   { opacity: 0%; margin: 0 10px}
+  50%   { opacity: 0%; margin: 0 30px}
+  100% { opacity: 100%; margin: 0 50px}
+}
+
+div img:hover{
+    transform: scale(1.2); 
+}
+
+.startscherm {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    pointer-events: none;
+    background-color:white;
+    opacity: 0;
+    animation: fade-out 11s 1 ease;
+}
+
+#startschermvideo {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    z-index: 1;
+}
+
+@keyframes fade-out {
+    0%   { opacity: 100%; }
+    75%  { opacity: 100%; }
+    100% { opacity: 0%; }
+  }
